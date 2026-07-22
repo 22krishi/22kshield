@@ -582,7 +582,7 @@ app.post('/api/lockdown/:guildId', async (req, res) => {
 
 // Web szerver indítása
 app.listen(PORT, () => {
-    console.log(`[22K Shield Web] Dashboard running at http://db.shield.22krishi.site:${PORT}`);
+    console.log(`[22K Shield Web] Dashboard running at http://localhost:${PORT}`);
 });
 
 // --- DISCORD BOT LOGIN ---
