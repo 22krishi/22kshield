@@ -236,7 +236,7 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(new DiscordStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: 'https://db.22krishi.site/auth/discord/callback',
+    callbackURL: 'https://shield.22krishi.site/auth/discord/callback',
     scope: ['identify', 'guilds'],
     proxy: true // <-- EZ A KULCS: Engedélyezi a proxyt a Passportnak is!
 }, (accessToken, refreshToken, profile, done) => {
@@ -585,7 +585,7 @@ app.post('/api/lockdown/:guildId', async (req, res) => {
 
 // Web szerver indítása
 app.listen(PORT, () => {
-    console.log(`[22K Shield Web] Dashboard running at http://db.22krishi.site:${PORT}`);
+    console.log(`[22K Shield Web] Dashboard running at http://shield.22krishi.site:${PORT}`);
 });
 
 // --- DISCORD BOT LOGIN ---
