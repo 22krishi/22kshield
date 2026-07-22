@@ -217,6 +217,8 @@ client.on('interactionCreate', async interaction => {
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set('trust proxy', 1); // <-- EZ KELL A RAILWAYHEZ!
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session({
@@ -582,7 +584,7 @@ app.post('/api/lockdown/:guildId', async (req, res) => {
 
 // Web szerver indítása
 app.listen(PORT, () => {
-    console.log(`[22K Shield Web] Dashboard running at http://localhost:${PORT}`);
+    console.log(`[22K Shield Web] Dashboard running at http://db.22krishi.site:${PORT}`);
 });
 
 // --- DISCORD BOT LOGIN ---
