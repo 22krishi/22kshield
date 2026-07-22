@@ -237,7 +237,8 @@ passport.use(new DiscordStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: 'https://db.22krishi.site/auth/discord/callback',
-    scope: ['identify', 'guilds']
+    scope: ['identify', 'guilds'],
+    proxy: true // <-- EZ A KULCS: Engedélyezi a proxyt a Passportnak is!
 }, (accessToken, refreshToken, profile, done) => {
     return done(null, profile);
 }));
