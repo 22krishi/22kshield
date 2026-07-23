@@ -236,7 +236,7 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(new DiscordStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: 'https://shield.22krishi.site/auth/discord/callback',
+    callbackURL: 'https://db.shield.22krishi.site/auth/discord/callback',
     scope: ['identify', 'guilds'],
     proxy: true // <-- EZ A KULCS: Engedélyezi a proxyt a Passportnak is!
 }, (accessToken, refreshToken, profile, done) => {
